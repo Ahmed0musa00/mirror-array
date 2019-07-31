@@ -1,5 +1,4 @@
 #include <stdio.h>
-#define SIZE 10
 
 /* function prototype */
 void mirror( const int b[], int startIndex, int size );
@@ -7,10 +6,18 @@ void mirror( const int b[], int startIndex, int size );
 /* function main begins program execution */
 int main( void )
 {
- int a[ SIZE ] = { 8, 3, 1, 2, 6, 0, 9, 7, 4, 5 }; /* initialize a */
-
+    int size;
+    printf("Enter the array size : ");
+    scanf("%d",&size);
+    int a[ size ]; /* initialize a */
+    printf("Enter the array element\n");
+    int i;
+    for(i=0;i<size;i++)
+    {
+        scanf("%d",&a[i]);
+    }
  printf( "Answer is:\n" );
- mirror( a, 0, SIZE );
+ mirror( a, 0, size );
  printf( "\n" );
  return 0; /* indicates successful termination */
 } /* end main */
